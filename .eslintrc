@@ -17,7 +17,10 @@
     ],
     "no-shadow": 0,
     "react/jsx-curly-spacing": {
-      "when": "always"
+      "when": "always",
+      "children": {
+        "when": "always"
+      }
     },
     "react/jsx-curly-brace-presence": "always",
     "react/jsx-tag-spacing": "warn",

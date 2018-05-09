@@ -2,60 +2,60 @@ const css = String.raw;
 
 export const breakpoints = {
   up: {
-    xs: 48,
-    sm: 76.8,
-    md: 102.4,
-    lg: 128,
+    xs: '576px',
+    sm: '768px',
+    md: '992px',
+    lg: '1200px',
   },
   down: {
-    xs: 47.99,
-    sm: 76.79,
-    md: 102.39,
-    lg: 127.99,
+    xs: '575.98px',
+    sm: '767.98px',
+    md: '991.98px',
+    lg: '1199.98px',
   },
 };
 
 export const media = {
   up: {
     xs: (...args) => css`
-      @media (min-width: ${breakpoints.up.xs}rem) {
+      @media (min-width: ${breakpoints.up.xs}) {
         ${css(...args)};
       }
     `,
     sm: (...args) => css`
-      @media (min-width: ${breakpoints.up.sm}rem) {
+      @media (min-width: ${breakpoints.up.sm}) {
         ${css(...args)};
       }
     `,
     md: (...args) => css`
-      @media (min-width: ${breakpoints.up.md}rem) {
+      @media (min-width: ${breakpoints.up.md}) {
         ${css(...args)};
       }
     `,
     lg: (...args) => css`
-      @media (min-width: ${breakpoints.up.lg}rem) {
+      @media (min-width: ${breakpoints.up.lg}) {
         ${css(...args)};
       }
     `,
   },
   down: {
     xs: (...args) => css`
-      @media (max-width: ${breakpoints.down.xs}rem) {
+      @media (max-width: ${breakpoints.down.xs}) {
         ${css(...args)};
       }
     `,
     sm: (...args) => css`
-      @media (max-width: ${breakpoints.down.sm}rem) {
+      @media (max-width: ${breakpoints.down.sm}) {
         ${css(...args)};
       }
     `,
     md: (...args) => css`
-      @media (max-width: ${breakpoints.down.md}rem) {
+      @media (max-width: ${breakpoints.down.md}) {
         ${css(...args)};
       }
     `,
     lg: (...args) => css`
-      @media (max-width: ${breakpoints.down.lg}rem) {
+      @media (max-width: ${breakpoints.down.lg}) {
         ${css(...args)};
       }
     `,

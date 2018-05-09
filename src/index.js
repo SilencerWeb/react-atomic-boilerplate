@@ -1,8 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { injectGlobal } from 'styled-components';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import { globalStyles } from 'ui/theme';
+
+import normalize from 'normalize.css/normalize.css';
+
+
+// eslint-disable-next-line no-unused-expressions
+injectGlobal`${normalize} ${globalStyles}`;
+
+ReactDOM.render(<div />, document.getElementById('root'));

@@ -188,6 +188,44 @@ module.exports = {
               },
             ],
           },
+          {
+            test: /\.svg$/,
+            use: [
+              { loader: 'svg-sprite-loader' },
+              {
+                loader: 'svgo-loader',
+                options: {
+                  plugins: [
+                    { cleanupAttrs: true },
+                    { removeDoctype: true },
+                    { removeXMLProcInst: true },
+                    { removeComments: true },
+                    { removeMetadata: true },
+                    { removeTitle: true },
+                    { removeDesc: true },
+                    { removeUselessDefs: true },
+                    { removeEditorsNSData: true },
+                    { removeEmptyAttrs: true },
+                    { removeHiddenElems: true },
+                    { removeEmptyText: true },
+                    { removeEmptyContainers: true },
+                    { minifyStyles: true },
+                    { removeUnknownsAndDefaults: true },
+                    { removeNonInheritableGroupAttrs: true },
+                    { removeUselessStrokeAndFill: true },
+                    { removeUnusedNS: true },
+                    { cleanupIDs: true },
+                    { sortAttrs: true },
+                    { removeDimensions: true },
+                    { removeAttrs: true },
+                    { removeElementsByAttr: true },
+                    { removeStyleElement: true },
+                    { removeScriptElement: true },
+                  ],
+                },
+              },
+            ],
+          },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.

@@ -1,7 +1,7 @@
 {
   "name": "react-atomic-boilerplate",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@storybook/react": "^3.4.3",
     "normalize.css": "^8.0.0",
